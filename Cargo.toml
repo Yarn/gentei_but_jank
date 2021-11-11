@@ -1,0 +1,26 @@
+[package]
+name = "gentei_but_jank"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lazy_static = "1.4.0"
+rand = "0.8.4"
+uuid = { version = "0.8.2", features = ["v1"] }
+chrono = { version = "0.4", features = ["serde"] }
+url = "2.2.2"
+anyhow = "1.0"
+governor = "0.3.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.68"
+
+tokio = { version = "1.12.0", features = ["full"] }
+
+poise = { git = "https://github.com/kangalioo/poise.git", rev = "aad22f9981496e9d62b83e4d59c49ed8a634708e" }
+
+sqlx = { version = "0.5.9", default-features = false, features = [ "runtime-tokio-rustls", "macros", "chrono", "time", "tls", "postgres", "migrate" ] }
+
+reqwest = { version = "0.11", features = ["json", "cookies"] }
+scraper = "0.12.0"
